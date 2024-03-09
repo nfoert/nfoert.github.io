@@ -1,94 +1,68 @@
 <!DOCTYPE html>
 
 <html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-  <head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="hover.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="darkreader-lock">
-    <title>nfoert</title>
-  </head>
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-  <body>
-    <div id="blob"></div>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-    <button id="play_button" class="animate-fade">Play</button>
-    <p id="landscape_warning">This site looks better in portrait mode.</p>
+        <title>nfoert</title>
+    </head>
 
-    <p class="text-header animate-fade-shorter" id="text_hello">Hello, I'm</p>
-    <div id="video_box">
-      <video autoplay muted id="nfoert_video">
-        <source src="nfoert.mp4" type="video/mp4">
-      </video> 
-    </div>
+    <body>
+        <div id="content">
+            <div id="profile">
+                <img id="profile-picture" src="https://github.com/nfoert.png">
 
-    <div id="photo_box">
-      <img id="tilt_img" src="nfoert.png">
-    </div>
+                <div id="profile-text">
+                    <p id="profile-username">nfoert</p>
+                    <p id="profile-pronouns">he/him</p>
+                </div>
+                
+            </div>
 
-    <p class="text-medium" id="text_github"><a href="https://github.com/nfoert">github.com/nfoert</a></p>
-
-    <div id="keep_scrolling">Scroll down</div>
-
-    <div id="boxes_box">
-      <div id="skills_subbox">
-        <p class="text-header animate-fade" id="text_skills">Skills</p>
-        <p class="text-small fade_in_low_opacity" id="tap_or_hover">Tap or hover to read more</p>
-        <div id="skills_box">
-          <div id="skills_box_boxes" class="animate-fade skills_box_boxes"><img class="skills_img" src="./icons/python.png"><div class="skills_text">Python</div></div>
-          <div id="skills_box_boxes" class="animate-fade skills_box_boxes"><img class="skills_img" src="./icons/html.png"><div class="skills_text">HTML</div></div>
-          <div id="skills_box_boxes" class="animate-fade skills_box_boxes"><img class="skills_img" src="./icons/css.png"><div class="skills_text">CSS</div></div>
-          <div id="skills_box_boxes" class="animate-fade skills_box_boxes"><img class="skills_img" src="./icons/js.png"><div class="skills_text">JavaScript</div></div>
-          <div id="skills_box_boxes" class="animate-fade skills_box_boxes"><img class="skills_img" src="./icons/cpp.svg"><div class="skills_text">C++</div></div>
-          <div id="skills_box_boxes" class="animate-fade skills_box_boxes"><img class="skills_img" src="./icons/blender.png"><div class="skills_text">Blender</div></div>
-          <div id="skills_box_boxes" class="animate-fade skills_box_boxes"><img class="skills_img" src="./icons/davinci.png"><div class="skills_text">Davinci</div></div>
-          <div id="skills_box_boxes" class="animate-fade skills_box_boxes"><img class="skills_img" src="./icons/gimp.png"><div class="skills_text">GIMP</div></div>
-        </div>
-      </div>
+            <div class="line"></div>
     
+            <div id="links">
+                <div id="links-links">
+                    <a class="link" url="https://github.com/nfoert"><i class="ph-bold ph-github-logo"></i> <strong>github</strong>.com/nfoert</a>
+                    <a class="link" url="https://linktr.ee/nfoert"><i class="ph-bold ph-tree"></i> <strong>linktr.ee</strong>/nfoert</a>
+                    <a class="link" url="https://mastodon.social/@nfoert"><i class="ph-bold ph-chat-text"></i> <strong>mastodon</strong>.social/@nfoert</a>
+                    <a class="link" url="https://pixelfed.social/nfoert"><i class="ph-bold ph-image-square"></i> <strong>pixelfed</strong>.social/nfoert</a>
+                    <a class="link" url="https://instagram.com/nfoert23"><i class="ph-bold ph-instagram-logo"></i> <strong>instagram</strong>.com/nfoert23</a>
+                    <a class="link" url="https://youtube.com/@nfoert"><i class="ph-bold ph-youtube-logo"></i> <strong>youtube</strong>.com/@nfoert</a>
+                    <a class="link" url="https://twitch.tv/nfoert"><i class="ph-bold ph-twitch-logo"></i> <strong>twitch</strong>.tv/nfoert</a>
+                    <!-- <a class="link" url="https://tiktok.com/@nfoert"><i class="ph-bold ph-tiktok-logo"></i> <strong>tiktok</strong>.com/@nfoert</a> -->
+                    <p class="link no-url" id="links-projects-button"><i class="ph-bold ph-arrow-down"></i> <strong>Projects</strong></p>
+                </div>
 
-      <div id="projects_subbox">
-        <p class="text-header animate-fade" id="text_projects">Projects</p>
-        <p class="text-small fade_in_low_opacity" id="tap_or_hover">Tap or hover to read more</p>
-        <div id="projects_box">
-          <a href="https://github.com/nfoert/jadelauncher"><div id="projects_box_boxes" class="animate-fade projects_box_boxes"><img class="projects_img" src="./projects/jadelauncher.png"><div class="projects_text">Jade Launcher</div><div class="projects_desc">The Jade Launcher is the one place to manage all of your apps across Jade Software</div></div></a>
-          <a href="https://github.com/nfoert/jadeassistant"><div id="projects_box_boxes" class="animate-fade projects_box_boxes"><img class="projects_img" src="./projects/jadeassistant.png"><div class="projects_text">Jade Assistant</div><div class="projects_desc">Jade Assistant is your new virtual assistant that can help with Q&A and answer apps for you</div></div></a>
-          <a href="https://github.com/nfoert/jadeapps"><div id="projects_box_boxes" class="animate-fade projects_box_boxes"><img class="projects_img" src="./projects/jadeapps.png"><div class="projects_text">Jade Apps</div><div class="projects_desc">Jade Apps is a collection of small applets designed to help you with small specific tasks, integrated into Jade Assistant.</div></div></a>
-          <a href="https://github.com/nfoert/jadeserver"><div id="projects_box_boxes" class="animate-fade projects_box_boxes"><img class="projects_img" src="./projects/jadesite.png"><div class="projects_text">Jade Site</div><div class="projects_desc">The Jade Site was my first big web project where you can learn about Jade Software. It's on it's second iteration.</div></div></a>
-          <a href="#" onclick="return false;"><div id="projects_box_boxes" class="animate-fade projects_box_boxes"><img class="projects_img" src="./projects/jadeauth.png"><div class="projects_text">Jade Auth</div><div class="projects_desc">Jade Auth is the new authentication platform for Jade Software.</div></div></a>
-          <a href="https://github.com/nfoert/jade_config"><div id="projects_box_boxes" class="animate-fade projects_box_boxes"><img class="projects_img" src="./projects/jadeconfig.png"><div class="projects_text">Jade Config</div><div class="projects_desc">Jade Config is a wrapper for the shelve python module for assisting in helping your programs store information.</div></div></a>
-          <a href="https://github.com/nfoert/nfoert.github.io"><div id="projects_box_boxes" class="animate-fade projects_box_boxes"><img class="projects_img" src="./projects/nfoertportfolio.png"><div class="projects_text">This Portfolio</div><div class="projects_desc">This portfolio was my first experimentation with Java Script and GitHub pages.</div></div></a>
-          <a href="https://github.com/nfoert/jadenewtab"><div id="projects_box_boxes" class="animate-fade projects_box_boxes"><img class="projects_img" src="./projects/jadenewtab.png"><div class="projects_text">Jade New Tab</div><div class="projects_desc">Jade New Tab was an experimentation of Add-Ons that I released for Firefox.</div></div></a>
-          <a href="https://github.com/nfoert/3dscolor"><div id="projects_box_boxes" class="animate-fade projects_box_boxes"><img class="projects_img" src="./projects/3dscolor.png"><div class="projects_text">3DS Color</div><div class="projects_desc">3ds color is my first C++ project. It assists the creation of homebrew by adding easy color and text positioning for text-based systems.</div></div></a>
+                <div id="links-projects">
+                    <p class="link no-url" id="links-links-button"><i class="ph-bold ph-arrow-up"></i> <strong>Links</strong></p>
+                    <a class="link" url="https://github.com/nfoert/circles"><i class="ph-bold ph-circle"></i> <strong>Circles</strong></a>
+                    <a class="link" url="https://github.com/nfoert/tlp-switcher"><i class="ph-bold ph-lightning"></i> <strong>tlp-switcher</strong></a>
+                    <a class="link" url="https://github.com/nfoert/nfoert.github.io"><i class="ph-bold ph-browser"></i> <strong>nfoert.github.io</strong></a>
+                    <a class="link" url="https://github.com/nfoert/jadelauncher"><i class="ph-bold ph-app-window"></i> <strong>Jade Launcher</strong></a>
+                    <a class="link" url="https://github.com/nfoert/jadeassistant"><i class="ph-bold ph-device-mobile-speaker"></i> <strong>Jade Assistant</strong></a>
+                    <a class="link" url="https://github.com/nfoert/jadeapps"><i class="ph-bold ph-squares-four"></i> <strong>Jade Apps</strong></a>
+                    <a class="link" url="https://github.com/nfoert"><i class="ph-bold ph-github-logo"></i> <strong>And more...</strong></a>
+                </div>
+                
+            </div>
+
+            <script src="main.js"></script>
+            
         </div>
-      </div>
 
-      <div id="page_end">
-        <hr id="page_end_line" class="fade_in_low_opacity">
-        
-        <p class="page_end_text_medium fade_in_low_opacity"><b>nfoert</b></p>
-        <p class="page_end_text_small fade_in_low_opacity"><a id="page_end_link" href="https://github.com/nfoert">GitHub</a></p>
-        <p class="page_end_text_small fade_in_low_opacity"><a id="page_end_link" rel="me" href="https://mastodon.social/@nfoert">Mastodon</a></p>
-        <p class="page_end_text_small fade_in_low_opacity"><a id="page_end_link" href="https://nfoert.pythonanywhere.com/jadesite">Jade Software</a></p>
-        <p class="page_end_text_small fade_in_low_opacity"><a id="page_end_link" href="mailto:jadesoftware1@gmail.com">Email</a></p>
+        <div id="sourcecode">
+            <p id="sourcecode-text">Designed by nfoert | <a href="https://github.com/nfoert/nfoert.github.io"><i class="ph-bold ph-link-simple"></i> Source code</a></p>
+        </div>
 
-        <a href="https://github.com/nfoert/nfoert.github.io"><p class="page_end_text_small fade_in_low_opacity" id="github_version_info">Loading</p></a>
+        <div id="animation-circle"></div>
 
-        <hr id="page_end_line" class="fade_in_low_opacity">
-      </div>
-    </div>
-  
-  
-  <script src="scripts/animation.js"></script>
-  <script src="scripts/blob.js"></script>
-  <script src="scripts/hidescroll.js"></script>
-  <script src="scripts/tilt.js"></script>
-  <script src="scripts/music.js"></script>
-  <script src="scripts/orientation.js"></script>
-  <script src="scripts/github.js"></script>
-  
-
-  </body>
-
+    </body>
 </html>
