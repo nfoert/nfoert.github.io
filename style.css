@@ -270,3 +270,22 @@ body {
     color: white;
 
 }
+
+#animation-circle {
+    aspect-ratio: 1;
+    border-radius: 100%;
+
+    border: 1px solid;
+    border-color: rgb(34, 35, 43);
+
+    width: 1px;
+    height: 1px;
+    background-color: rgb(34, 35, 43);
+
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    transition: scale 1s ease;
+
+}
