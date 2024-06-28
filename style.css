@@ -184,7 +184,7 @@ body {
     transition: 0.3s ease;
     text-decoration: none;
     border-radius: 20px;
-    padding: 5px;
+    padding: clamp(0.5vh, 5px, 0.5vw);
     padding-left: 10px;
     padding-right: 10px;
 
