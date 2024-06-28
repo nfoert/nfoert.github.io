@@ -6,7 +6,7 @@ body {
     /* background-color: #363747;*/
 
     background: rgb(54,55,71);
-    background: linear-gradient(157deg, rgba(54,55,71,1) 20%, rgba(41,42,56,1) 80%); 
+    background: linear-gradient(120deg, rgb(54,55,71) 0%, rgb(41,42,56) 100%); 
 }
 
 @keyframes appear {
@@ -50,8 +50,8 @@ body {
         border: 1px solid rgb(135, 135, 135);
         border-radius: 5px;
         height: auto;
-        width: 4px;
-        margin: 10px;
+        width: clamp(0.4vh, 4px, 0.4vw);
+        margin: clamp(1vh, 10px, 1vw);
     
         transition: 0.3s ease;
     }
@@ -94,6 +94,16 @@ body {
         text-shadow: 0px 0px 7px rgba(255,255,255,0.4);
     }
     
+    .link:hover {
+        font-size: clamp(2vh, 20px, 2vw);
+        background-color: rgba(67, 71, 81, 0.6);
+        opacity: 1;
+    }
+
+    .link:active {
+        font-size: clamp(1.7vh, 17px, 1.7vw);
+        background-color: rgba(60, 58, 66, 0.6);
+    }
 }
 
 @media (max-width: 1000px) {
@@ -116,9 +126,9 @@ body {
         background-color: rgba(131, 131, 131, 0.7);
         border: 1px solid rgb(135, 135, 135);
         border-radius: 5px;
-        height: 4px;
+        height: clamp(0.4vh, 4px, 0.4vw);
         width: auto;
-        margin: 10px;
+        margin: clamp(1vh, 10px, 1vw);
     
         transition: 0.3s ease;
     }
@@ -158,8 +168,15 @@ body {
         text-shadow: 0px 0px 7px rgba(255,255,255,0.4);
     }
     
-}
+    .link:hover {
+        background-color: rgba(49, 52, 63, 0.6);
+        opacity: 1;
+    }
 
+    .link:active {
+        background-color: rgba(37, 34, 45, 0.6);
+    }
+}
 
 .link {
     color: white;
@@ -187,23 +204,12 @@ body {
     text-decoration: none;
 }
 
-.link:hover {
-    font-size: clamp(2vh, 20px, 2vw);
-    background-color: rgba(69, 69, 69, 0.7);
-    opacity: 1;
-}
-
-.link:active {
-    font-size: clamp(1.7vh, 17px, 1.7vw);
-    background-color: rgba(45, 45, 45, 0.7);
-}
-
 #profile-picture {
     border-radius: 100%;
-    border: 2px solid rgb(135, 135, 135);
+    border: clamp(0.3vh, 3px, 0.3vw) solid rgb(135, 135, 135);
 
     aspect-ratio: 1;
-    width: clamp(15vh, 150px, 15vw);
+    width: clamp(13vh, 130px, 13vw);
 
     transition: 0.3s ease;
 
@@ -211,7 +217,7 @@ body {
 }
 
 #profile-picture:hover {
-    scale: 1.1;
+    scale: 1.05;
 }
 
 #profile-picture:active {
@@ -249,7 +255,8 @@ body {
 #sourcecode-text {
     margin: 0;
     color: white;
-    font-size: clamp(1vh, 10px, 1vw);
+    opacity: 0.7;
+    font-size: clamp(1.2vh, 12px, 1.2vw);
 
     text-shadow: 0px 0px 7px rgba(255,255,255,0.4);
 }
@@ -262,13 +269,11 @@ body {
 #sourcecode-text > a:visited {
     text-decoration: none;
     color: white;
-
 }
 
 #sourcecode-text > a:active {
     text-decoration: none;
     color: white;
-
 }
 
 #animation-circle {
@@ -287,5 +292,4 @@ body {
     left: 0px;
 
     transition: scale 1s ease;
-
 }
