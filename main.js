@@ -2,40 +2,6 @@ window.addEventListener("load", function() {
     document.getElementById("content").classList.add("appear");
 });
 
-function handleProjectButtonClick() {
-    document.getElementById("links-links").style.opacity = 0;
-    
-    setTimeout(function() {
-        document.getElementById("links-links").style.display = "none";
-
-        document.getElementById("links-projects").style.display = "flex";
-
-        setTimeout(function() {
-            document.getElementById("links-projects").style.opacity = 1;
-        }, 300);
-    }, 400);
-}
-
-function handleLinksButtonClick() {
-    document.getElementById("links-projects").style.opacity = 0;
-
-    setTimeout(function() {
-        document.getElementById("links-projects").style.display = "none";
-
-        document.getElementById("links-links").style.display = "flex";
-
-        setTimeout(function() {
-            document.getElementById("links-links").style.opacity = 1;
-        }, 300);
-    }, 400);
-}
-
-document.getElementById("links-projects-button").addEventListener("click", handleProjectButtonClick);
-document.getElementById("links-projects-button").addEventListener("touchstart", handleProjectButtonClick);
-
-document.getElementById("links-links-button").addEventListener("click", handleLinksButtonClick);
-document.getElementById("links-links-button").addEventListener("touchstart", handleLinksButtonClick);
-
 document.addEventListener('mousemove', function(event) {
     document.getElementById("animation-circle").style.left = event.clientX + "px";
     document.getElementById("animation-circle").style.top = event.clientY + "px";

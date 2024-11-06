@@ -8,6 +8,9 @@
 
         <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
+        <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
 
@@ -30,9 +33,9 @@
             </div>
 
             <div class="line"></div>
-    
-            <div id="links">
-                <div id="links-links">
+            
+            <div id="links" x-data="main_sections()">
+                <div id="links-links" x-show="links" x-transition.delay.in.200ms>
                     <a class="link" url="https://github.com/nfoert"><i class="ph-bold ph-github-logo"></i> <strong>github</strong>.com/nfoert</a>
                     <a class="link" url="https://linktr.ee/nfoert"><i class="ph-bold ph-tree"></i> <strong>linktr.ee</strong>/nfoert</a>
                     <a class="link" rel="me" url="https://mastodon.social/@nfoert"><i class="ph-bold ph-chat-text"></i> <strong>mastodon</strong>.social/@nfoert</a>
@@ -41,11 +44,11 @@
                     <a class="link" url="https://youtube.com/@nfoert"><i class="ph-bold ph-youtube-logo"></i> <strong>youtube</strong>.com/@nfoert</a>
                     <a class="link" url="https://twitch.tv/nfoert"><i class="ph-bold ph-twitch-logo"></i> <strong>twitch</strong>.tv/nfoert</a>
                     <!-- <a class="link" url="https://tiktok.com/@nfoert"><i class="ph-bold ph-tiktok-logo"></i> <strong>tiktok</strong>.com/@nfoert</a> -->
-                    <p class="link no-url" id="links-projects-button"><i class="ph-bold ph-arrow-down"></i> <strong>Projects</strong></p>
+                    <p class="link no-url" id="links-projects-button" @click="links = false"><i class="ph-bold ph-arrow-down"></i> <strong>Projects</strong></p>
                 </div>
 
-                <div id="links-projects">
-                    <p class="link no-url" id="links-links-button"><i class="ph-bold ph-arrow-up"></i> <strong>Links</strong></p>
+                <div id="links-projects" x-show="!links" x-transition.delay.in.200ms>
+                    <p class="link no-url" id="links-links-button" @click="links = true"><i class="ph-bold ph-arrow-up"></i> <strong>Links</strong></p>
                     <a class="link" url="https://github.com/nfoert/cardie"><i class="ph-bold ph-credit-card"></i> <strong>Cardie</strong></a>
                     <a class="link" url="https://github.com/nfoert/circles"><i class="ph-bold ph-circle"></i> <strong>Circles</strong></a>
                     <a class="link" url="https://github.com/nfoert/tlp-switcher"><i class="ph-bold ph-lightning"></i> <strong>tlp-switcher</strong></a>
@@ -54,8 +57,19 @@
                     <a class="link" url="https://github.com/nfoert/jadeassistant"><i class="ph-bold ph-device-mobile-speaker"></i> <strong>Jade Assistant</strong></a>
                     <a class="link" url="https://github.com/nfoert"><i class="ph-bold ph-github-logo"></i> <strong>And more...</strong></a>
                 </div>
-                
             </div>
+
+            <script>
+                function main_sections() {
+                    return {
+                        links: true,
+                        projects_images: {
+                            "cardie": "https://raw.githubusercontent.com/nfoert/cardie/refs/heads/main/cardie/static/main/images/icon_light.png"
+                        }
+                    }
+                }
+            </script>
+            
 
             <script src="main.js"></script>
             
