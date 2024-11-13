@@ -179,6 +179,7 @@ body {
 }
 
 .link {
+    all: unset;
     color: white;
     font-size: clamp(1.8vh, 18px, 1.8vw);
     transition: 0.3s ease;
@@ -197,6 +198,7 @@ body {
     user-select: none;
 
     text-shadow: 0px 0px 7px rgba(255,255,255,0.4);
+    width: 100%;
 }
 
 .link:visited {
@@ -271,20 +273,72 @@ body {
     color: white;
 }
 
-#animation-circle {
-    aspect-ratio: 1;
-    border-radius: 100%;
+.project-menu {
+    margin-left: 15px;
+}
 
-    border: 1px solid;
-    border-color: rgb(34, 35, 43);
+.project-menu-image {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+}
 
-    width: 1px;
-    height: 1px;
-    background-color: rgb(34, 35, 43);
+.project-menu-text {
+    font-size: clamp(1.4vh, 14px, 1.4vw);
+    text-shadow: 0px 0px 7px rgba(255,255,255,0.4);
+    opacity: 0.7;
+}
 
-    position: fixed;
-    top: 0px;
-    left: 0px;
+.project-box[open="open"] {
+    background-color: rgba(49, 52, 63, 0.9);
+    border: 1px solid rgba(72, 77, 95, 1);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 5px;
+    padding-right: 15px;
+    transition: 0.3s ease;
+}
 
-    transition: scale 1s ease;
+.link-project {
+    all: unset;
+    color: white;
+    font-size: clamp(1.2vh, 12px, 1.2vw);
+    transition: 0.3s ease;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: clamp(0.5vh, 5px, 0.5vw);
+    padding-left: 6px;
+    padding-right: 6px;
+
+    opacity: 0.7;
+
+    margin: 2px;
+
+    cursor: pointer;
+    user-select: none;
+
+    text-shadow: 0px 0px 7px rgba(255,255,255,0.4);
+    width: 100%;
+
+    text-align: center;
+
+    background-color: rgba(67, 71, 81, 0.4);
+    border: 1px solid rgba(72, 77, 95, 0.6);
+}
+
+.link-project:hover {
+    font-size: clamp(1.4vh, 14px, 1.4vw);
+    background-color: rgba(67, 71, 81, 0.6);
+    opacity: 1;
+}
+
+.link-project:active {
+    font-size: clamp(1.1vh, 11px, 1.1vw);
+    background-color: rgba(60, 58, 66, 0.6);
+}
+
+.project-menu-logo {
+    max-width: 50px;
+    height: auto;
+    object-fit: contain;
 }
