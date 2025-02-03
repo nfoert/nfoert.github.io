@@ -49,6 +49,26 @@
                     <p class="link no-url" id="links-links-button" @click="links = true"><i class="ph-bold ph-arrow-up"></i> <strong>Links</strong></p>
 
                     <div class="project-box" x-data="{ open: false }" x-bind:open="open">
+                        <button class="link" url="https://github.com/FRC-Team3484/open-scouting" @click="open = ! open"><i class="ph-bold ph-caret-down" x-show="! open"></i><i class="ph-bold ph-caret-up" x-show="open"></i> <strong>Open Scouting</strong></button>
+
+                        <div class="project-menu" x-show="open" x-collapse>
+                            <div style="display: flex; flex-direction: row;">
+                                <img class="project-menu-logo" src="https://raw.githubusercontent.com/FRC-Team3484/open-scouting/refs/heads/main/repo/images/icon.png">
+                                <p class="project-menu-text">An open source application for easier scouting at First Robotics competitions </p>
+                            </div>
+
+                            <div>
+                                <img class="project-menu-image" src="https://raw.githubusercontent.com/FRC-Team3484/open-scouting/refs/heads/main/repo/images/mobile.png">
+                            </div>
+
+                            <div style="display: flex; flex-direction: row;">
+                                <a class="link-project"><i class="ph-bold ph-github-logo" href="https://github.com/FRC-Team3484/open-scouting"></i> Source Code</a>
+                                <!-- <a class="link-project"><i class="ph-bold ph-hard-drives" href="https://cardie-uwtwy.ondigitalocean.app/"></i> Live server</a> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-box" x-data="{ open: false }" x-bind:open="open">
                         <button class="link" url="https://github.com/nfoert/cardie" @click="open = ! open"><i class="ph-bold ph-caret-down" x-show="! open"></i><i class="ph-bold ph-caret-up" x-show="open"></i> <strong>Cardie</strong></button>
 
                         <div class="project-menu" x-show="open" x-collapse>
