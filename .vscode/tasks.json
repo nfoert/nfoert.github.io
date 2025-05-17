@@ -1,0 +1,29 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build CSS",
+            "type": "shell",
+            "command": "npx @tailwindcss/cli -i ./input.css -o ./output.css --watch",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "problemMatcher": []
+        },
+        {
+            "type": "Live Preview",
+            "workspacePath": "/home/nfoert/Programming/nfoert.github.io",
+            "problemMatcher": [],
+            "label": "Live Preview: Run Server",
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
+        }
+    ]
+}
