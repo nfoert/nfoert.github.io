@@ -14,47 +14,55 @@
     <title>nfoert</title>
 </head>
 
-<body class="bg-slate-800 flex items-center justify-center min-h-screen min-w-screen" x-data>
-    <div class="flex flex-col md:flex-row items-center md:items-start gap-4 p-4">
-        <!-- Profile Section -->
-        <div class="flex flex-row md:flex-col gap-4 w-full md:w-auto items-center md:items-end">
-            <img class="w-32 h-32 rounded-full border-slate-600 border-2 hover:scale-105 active:scale-95 transition-transform"
-                src="https://github.com/nfoert.png" alt="nfoert"
-                @click="window.location.href='https://github.com/nfoert'">
-            <div class="flex flex-col text-left md:text-right">
-                <p class="text-white text-2xl text-shadow-lg text-shadow-white/20">nfoert</p>
-                <p class="text-white text-lg opacity-80 text-shadow-lg text-shadow-white/20 ml-4">he/him</p>
-                <p class="text-white text-md max-w-xs md:max-w-60 text-shadow-lg text-shadow-white/20 ml-4">
-                    Full stack web developer, who cares about open source and has experience in C++ and self hosting
-                </p>
-            </div>
-        </div>
-
-        <!-- Divider -->
-        <div class="bg-slate-700 w-full h-2 md:w-2 md:h-auto rounded-full border-slate-600 border-2 md:self-stretch">
-        </div>
-
-        <!-- Links Section -->
-        <div class="flex flex-col items-center" x-data="{ projects: true }">
-            <div class="flex flex-col gap-2 items-center md:items-start md:self-center" x-show="projects" x-transition.delay.in.200ms>
-                <a class="ui_link" href="https://github.com/nfoert"><i class="ph-bold ph-github-logo"></i> github.com/<strong>nfoert</strong></a>
-                <a class="ui_link" href="https://mastodon.social/@nfoert"><i class="ph-bold ph-mastodon-logo"></i> mastodon.social/@<strong>nfoert</strong></a>
-                <a class="ui_link" href="https://pixelfed.social/nfoert"><i class="ph-bold ph-image"></i> pixelfed.social/<strong>nfoert</strong></a>
-                <button class="ui_link" @click="projects = false"><i class="ph-bold ph-arrow-down"></i> Projects</button>
+<body class="bg-slate-800">
+    <div class="flex items-center justify-center min-h-screen min-w-screen" x-data>
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-4 p-4">
+            <!-- Profile Section -->
+            <div class="flex flex-row md:flex-col gap-4 w-full md:w-auto items-center md:items-end">
+                <img class="w-32 h-32 rounded-full border-slate-600 border-2 hover:scale-105 active:scale-95 transition-transform"
+                    src="https://github.com/nfoert.png" alt="nfoert"
+                    @click="window.location.href='https://github.com/nfoert'">
+                <div class="flex flex-col text-left md:text-right">
+                    <p class="text-white text-2xl text-shadow-lg text-shadow-white/20">nfoert</p>
+                    <p class="text-white text-lg opacity-80 text-shadow-lg text-shadow-white/20 ml-4">he/him</p>
+                    <p class="text-white text-md max-w-xs md:max-w-60 text-shadow-lg text-shadow-white/20 ml-4">
+                        Full stack web developer, who cares about open source and has experience in C++ and self hosting
+                    </p>
+                </div>
             </div>
 
-            <div class="flex flex-col gap-2 items-center md:items-start md:self-center" x-show="!projects" x-transition.delay.in.200ms>
-                <button class="ui_link" @click="projects = true"><i class="ph-bold ph-arrow-up"></i> Links</button>
-                <a class="ui_link" href="https://github.com/FRC-Team3484/open-scouting"> Open Scouting</a>
-                <a class="ui_link" href="https://github.com/nfoert/cardie"> Cardie</a>
-                <a class="ui_link !font-mono" href="https://github.com/nfoert/md-to-html"> md-to-html</a>
-                <a class="ui_link !font-mono" href="https://github.com/nfoert/niri-dotfiles"> niri-dotfiles</a>
-                <a class="ui_link" href="https://github.com/nfoert/circles"> Circles</a>
-                <a class="ui_link !font-mono" href="https://github.com/nfoert/nfoert.github.io"> nfoert.github.io</a>
-                <a class="ui_link !font-mono" href="https://github.com/nfoert/pico-smart-home"> pico-smart-home</a>
-                <a class="ui_link" href="https://github.com/nfoert"> <i class="ph-bold ph-github-logo"></i> And more...</a>
+            <!-- Divider -->
+            <div class="bg-slate-700 w-full h-2 md:w-2 md:h-auto rounded-full border-slate-600 border-2 md:self-stretch">
+            </div>
+
+            <!-- Links Section -->
+            <div class="flex flex-col items-center" x-data="{ projects: true }">
+                <div class="flex flex-col gap-2 items-center md:items-start md:self-center" x-show="projects" x-transition.delay.in.200ms>
+                    <a class="ui_link" href="https://github.com/nfoert"><i class="ph-bold ph-github-logo"></i> github.com/<strong>nfoert</strong></a>
+                    <a class="ui_link" href="https://mastodon.social/@nfoert"><i class="ph-bold ph-mastodon-logo"></i> mastodon.social/@<strong>nfoert</strong></a>
+                    <a class="ui_link" href="https://pixelfed.social/nfoert"><i class="ph-bold ph-image"></i> pixelfed.social/<strong>nfoert</strong></a>
+                    <button class="ui_link" @click="projects = false"><i class="ph-bold ph-arrow-down"></i> Projects</button>
+                </div>
+
+                <div class="flex flex-col gap-2 items-center md:items-start md:self-center" x-show="!projects" x-transition.delay.in.200ms>
+                    <button class="ui_link" @click="projects = true"><i class="ph-bold ph-arrow-up"></i> Links</button>
+                    <a class="ui_link" href="https://github.com/FRC-Team3484/open-scouting"> Open Scouting</a>
+                    <a class="ui_link" href="https://github.com/nfoert/cardie"> Cardie</a>
+                    <a class="ui_link !font-mono" href="https://github.com/nfoert/md-to-html"> md-to-html</a>
+                    <a class="ui_link !font-mono" href="https://github.com/nfoert/niri-dotfiles"> niri-dotfiles</a>
+                    <a class="ui_link" href="https://github.com/nfoert/circles"> Circles</a>
+                    <a class="ui_link !font-mono" href="https://github.com/nfoert/nfoert.github.io"> nfoert.github.io</a>
+                    <a class="ui_link !font-mono" href="https://github.com/nfoert/pico-smart-home"> pico-smart-home</a>
+                    <a class="ui_link" href="https://github.com/nfoert"> <i class="ph-bold ph-github-logo"></i> And more...</a>
+                </div>
             </div>
         </div>
+    </div>
+
+    <div class="absolute bottom-2 left-2 flex flex-row gap-1">
+        <p class="text-white text-xs opacity-80">Designed by nfoert</p>
+        <p class="text-white text-xs opacity-80">|</p>
+        <a class="text-white text-xs opacity-90" href="https://github.com/nfoert/nfoert.github.io"><i class="ph-bold ph-link"></i> Source Code</a>
     </div>
 </body>
 
