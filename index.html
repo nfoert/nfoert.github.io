@@ -46,13 +46,28 @@
 
                 <div class="flex flex-col gap-2 items-center md:items-start md:self-center" x-show="!projects" x-transition.delay.in.200ms>
                     <button class="ui_link" @click="projects = true"><i class="ph-bold ph-arrow-up"></i> Links</button>
-                    <a class="ui_link" href="https://github.com/FRC-Team3484/open-scouting"> Open Scouting</a>
-                    <a class="ui_link" href="https://github.com/nfoert/cardie"> Cardie</a>
-                    <a class="ui_link !font-mono" href="https://github.com/nfoert/md-to-html"> md-to-html</a>
-                    <a class="ui_link !font-mono" href="https://github.com/nfoert/niri-dotfiles"> niri-dotfiles</a>
-                    <a class="ui_link" href="https://github.com/nfoert/circles"> Circles</a>
-                    <a class="ui_link !font-mono" href="https://github.com/nfoert/nfoert.github.io"> nfoert.github.io</a>
-                    <a class="ui_link !font-mono" href="https://github.com/nfoert/pico-smart-home"> pico-smart-home</a>
+                    <a class="ui_link md:justify-start" href="https://github.com/FRC-Team3484/open-scouting">
+                        <div class="flex justify-center items-center md:justify-start">
+                            <img class="w-6 h-6 inline" src="https://raw.githubusercontent.com/FRC-Team3484/open-scouting/refs/heads/main/repo/images/icon.png">
+                            <span class="ml-2">Open Scouting</span>
+                        </div>
+                    </a>
+                    <a class="ui_link md:justify-start" href="https://github.com/nfoert/cardie">
+                        <div class="flex justify-center items-center md:justify-start">
+                            <img class="w-6 h-6 inline" src="https://raw.githubusercontent.com/nfoert/cardie/refs/heads/main/repo/images/icon_rounded.png">
+                            <span class="ml-2">Cardie</span>
+                        </div>
+                    </a>
+                    <a class="ui_link !font-mono" href="https://github.com/nfoert/md-to-html"><i class="ph-bold ph-file-md"></i> md-to-html</a>
+                    <a class="ui_link !font-mono" href="https://github.com/nfoert/niri-dotfiles"><i class="ph-bold ph-file"></i> niri-dotfiles</a>
+                    <a class="ui_link md:justify-start" href="https://github.com/nfoert/circles">
+                        <div class="flex justify-center items-center md:justify-start">
+                            <img class="w-6 h-6 inline" src="https://raw.githubusercontent.com/nfoert/circles/refs/heads/main/circles/static/main/images/icon.png">
+                            <span class="ml-2">Circles</span>
+                        </div>
+                    </a>
+                    <a class="ui_link !font-mono" href="https://github.com/nfoert/nfoert.github.io"><i class="ph-bold ph-browser"></i> nfoert.github.io</a>
+                    <a class="ui_link !font-mono" href="https://github.com/nfoert/pico-smart-home"><i class="ph-bold ph-house"></i> pico-smart-home</a>
                     <a class="ui_link" href="https://github.com/nfoert"> <i class="ph-bold ph-github-logo"></i> And more...</a>
                 </div>
             </div>
