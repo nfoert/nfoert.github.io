@@ -1,121 +1,112 @@
 <!DOCTYPE html>
-
 <html>
-    <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+<head>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-        <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
-        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="output.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="darkreader-lock">
+    <title>nfoert</title>
+</head>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="darkreader-lock">
-
-        <title>nfoert</title>
-    </head>
-
-    <body>
-        <div id="content">
-            <div id="profile">
-                <img id="profile-picture" src="https://github.com/nfoert.png">
-
-                <div id="profile-text">
-                    <p id="profile-username">nfoert</p>
-                    <p id="profile-pronouns">he/him</p>
-                </div>
-                
-            </div>
-
-            <div class="line"></div>
-            
-            <div id="links" x-data="main_sections()">
-                <div id="links-links" x-show="links" x-transition.delay.in.200ms>
-                    <a class="link" href="https://github.com/nfoert"><i class="ph-bold ph-github-logo"></i> <strong>github</strong>.com/nfoert</a>
-                    <a class="link" href="https://linktr.ee/nfoert"><i class="ph-bold ph-tree"></i> <strong>linktr.ee</strong>/nfoert</a>
-                    <a class="link" rel="me" href="https://mastodon.social/@nfoert"><i class="ph-bold ph-chat-text"></i> <strong>mastodon</strong>.social/@nfoert</a>
-                    <a class="link" href="https://pixelfed.social/nfoert"><i class="ph-bold ph-image-square"></i> <strong>pixelfed</strong>.social/nfoert</a>
-                    <!-- <a class="link" href="https://youtube.com/@nfoert"><i class="ph-bold ph-youtube-logo"></i> <strong>youtube</strong>.com/@nfoert</a>
-                    <a class="link" href="https://twitch.tv/nfoert"><i class="ph-bold ph-twitch-logo"></i> <strong>twitch</strong>.tv/nfoert</a> -->
-                    <p class="link no-url" id="links-projects-button" @click="links = false"><i class="ph-bold ph-arrow-down"></i> <strong>Projects</strong></p>
-                </div>
-
-                <div id="links-projects" x-show="!links" x-transition.delay.in.200ms>
-                    <p class="link no-url" id="links-links-button" @click="links = true"><i class="ph-bold ph-arrow-up"></i> <strong>Links</strong></p>
-
-                    <div class="project-box" x-data="{ open: false }" x-bind:open="open">
-                        <button class="link" url="https://github.com/FRC-Team3484/open-scouting" @click="open = ! open"><i class="ph-bold ph-caret-down" x-show="! open"></i><i class="ph-bold ph-caret-up" x-show="open"></i> <strong>Open Scouting</strong></button>
-
-                        <div class="project-menu" x-show="open" x-collapse>
-                            <div style="display: flex; flex-direction: row;">
-                                <img class="project-menu-logo" src="https://raw.githubusercontent.com/FRC-Team3484/open-scouting/refs/heads/main/repo/images/icon.png">
-                                <p class="project-menu-text">An open source application for easier scouting at First Robotics competitions </p>
-                            </div>
-
-                            <div>
-                                <img class="project-menu-image" src="https://raw.githubusercontent.com/FRC-Team3484/open-scouting/refs/heads/main/repo/images/mobile.png">
-                            </div>
-
-                            <div style="display: flex; flex-direction: row;">
-                                <a class="link-project" href="https://github.com/FRC-Team3484/open-scouting"><i class="ph-bold ph-github-logo"></i> Source Code</a>
-                                <!-- <a class="link-project"><i class="ph-bold ph-hard-drives" href="https://cardie-uwtwy.ondigitalocean.app/"></i> Live server</a> -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-box" x-data="{ open: false }" x-bind:open="open">
-                        <button class="link" url="https://github.com/nfoert/cardie" @click="open = ! open"><i class="ph-bold ph-caret-down" x-show="! open"></i><i class="ph-bold ph-caret-up" x-show="open"></i> <strong>Cardie</strong></button>
-
-                        <div class="project-menu" x-show="open" x-collapse>
-                            <div style="display: flex; flex-direction: row;">
-                                <img class="project-menu-logo" src="https://raw.githubusercontent.com/nfoert/cardie/refs/heads/main/cardie/static/main/images/icon_light.png">
-                                <p class="project-menu-text">An open source business card designer and sharing platform</p>
-                            </div>
-
-                            <div>
-                                <img class="project-menu-image" src="https://raw.githubusercontent.com/nfoert/cardie/refs/heads/main/repo/images/screenshot1.png">
-                            </div>
-
-                            <div style="display: flex; flex-direction: row;">
-                                <a class="link-project" href="https://github.com/nfoert/cardie"><i class="ph-bold ph-github-logo"></i> Source Code</a>
-                                <!-- <a class="link-project" href="https://cardie-uwtwy.ondigitalocean.app/"><i class="ph-bold ph-hard-drives"></i> Live server</a> -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <a class="link" href="https://github.com/nfoert/md-to-html"><i class="ph-bold ph-file"></i> <strong>md-to-html</strong></a>
-                    <a class="link" href="https://github.com/nfoert/circles"><i class="ph-bold ph-circle"></i> <strong>Circles</strong></a>
-                    <a class="link" href="https://github.com/nfoert/tlp-switcher"><i class="ph-bold ph-lightning"></i> <strong>tlp-switcher</strong></a>
-                    <a class="link" href="https://github.com/nfoert/nfoert.github.io"><i class="ph-bold ph-browser"></i> <strong>nfoert.github.io</strong></a>
-                    <a class="link" href="https://github.com/nfoert/pico-smart-home"><i class="ph-bold ph-app-window"></i> <strong>pico-smart-home</strong></a>
-                    <a class="link" href="https://github.com/nfoert/niri-dotfiles"><i class="ph-bold ph-app-window"></i> <strong>niri-dotfiles</strong></a>
-                    <a class="link" href="https://github.com/nfoert"><i class="ph-bold ph-github-logo"></i> <strong>And more...</strong></a>
+<body class="bg-slate-800">
+    <div class="flex items-center justify-center min-h-screen min-w-screen" x-data>
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-4 p-4">
+            <!-- Profile Section -->
+            <div class="flex flex-row md:flex-col gap-4 w-full md:w-auto items-center md:items-end">
+                <img class="w-32 h-32 rounded-full border-slate-600 border-2 hover:scale-105 active:scale-95 transition-transform"
+                    src="https://github.com/nfoert.png" alt="nfoert"
+                    @click="window.location.href='https://github.com/nfoert'">
+                <div class="flex flex-col text-left md:text-right">
+                    <p class="text-white text-2xl text-shadow-lg text-shadow-white/20">nfoert</p>
+                    <p class="text-white text-lg opacity-80 text-shadow-lg text-shadow-white/20 ml-4">he/him</p>
+                    <p class="text-white text-md max-w-xs md:max-w-60 text-shadow-lg text-shadow-white/20 ml-4">
+                        Full stack web developer, who cares about open source and has experience in C++ and self hosting
+                    </p>
                 </div>
             </div>
 
-            <script>
-                function main_sections() {
-                    return {
-                        links: true,
-                        projects_images: {
-                            "cardie": "https://raw.githubusercontent.com/nfoert/cardie/refs/heads/main/cardie/static/main/images/icon_light.png"
-                        }
-                    }
-                }
-            </script>
-            
+            <!-- Divider -->
+            <div class="bg-slate-700 w-full h-2 md:w-2 md:h-auto rounded-full border-slate-600 border-2 md:self-stretch">
+            </div>
 
-            <script src="main.js"></script>
-            
-        </div>
+            <!-- Links Section -->
+            <div class="flex flex-col items-center" x-data="{ projects: true }">
+                <div class="flex flex-col gap-2 items-center md:items-start md:self-center" x-show="projects" x-transition.delay.in.200ms>
+                    <a class="ui_link" href="https://github.com/nfoert"><i class="ph-bold ph-github-logo"></i> github.com/<strong>nfoert</strong></a>
+                    <a class="ui_link" href="https://mastodon.social/@nfoert"><i class="ph-bold ph-mastodon-logo"></i> mastodon.social/@<strong>nfoert</strong></a>
+                    <a class="ui_link" href="https://pixelfed.social/nfoert"><i class="ph-bold ph-image"></i> pixelfed.social/<strong>nfoert</strong></a>
+                    <button class="ui_link" @click="projects = false"><i class="ph-bold ph-arrow-down"></i> Projects</button>
+                </div>
 
-        <div id="sourcecode">
-            <p id="sourcecode-text">Designed by nfoert | <a href="https://github.com/nfoert/nfoert.github.io"><i class="ph-bold ph-link-simple"></i> Source code</a></p>
+                <div class="flex flex-col gap-2 items-center md:items-start md:self-center" x-show="!projects" x-transition.delay.in.200ms>
+                    <button class="ui_link" @click="projects = true"><i class="ph-bold ph-arrow-up"></i> Links</button>
+                    <div x-data="{ open: false }" :class="{ 'bg-slate-700/50 border-slate-600/60 rounded-2xl transition-all py-2 px-6': open }">
+                        <button class="ui_link md:justify-start" href="https://github.com/FRC-Team3484/open-scouting" @click="open = !open">
+                            <div class="flex justify-center items-center md:justify-start gap-1">
+                                <img class="w-6 h-6 inline mr-1" src="https://raw.githubusercontent.com/FRC-Team3484/open-scouting/refs/heads/main/repo/images/icon.png">
+                                <span>Open Scouting</span>
+                                <i class="ph-bold ph-caret-down" x-show="!open"></i>
+                                <i class="ph-bold ph-caret-up" x-show="open"></i>
+                            </div>
+                        </button>
+
+                        <div x-show="open" x-collapse class="flex flex-col max-w-80">
+                            <p class="text-white text-sans text-center">An open source application for easier scouting at First Robotics competitions</p>
+                            <div class="flex flex-row gap-2 mt-2">
+                                <a class="ui_link_small" href="https://github.com/FRC-Team3484/open-scouting"><i class="ph-bold ph-github-logo"></i> Source Code</a>
+                                <a class="ui_link_small" href="https://open-scouting.duckdns.org"><i class="ph-bold ph-hard-drives"></i> Live Server</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div x-data="{ open: false }" :class="{ 'bg-slate-700/50 border-slate-600/60 rounded-2xl transition-all py-2 px-6': open }">
+                        <button class="ui_link md:justify-start" href="https://github.com/nfoert/cardie" @click="open = !open">
+                            <div class="flex justify-center items-center md:justify-start gap-1">
+                                <img class="w-6 h-6 inline mr-1" src="https://raw.githubusercontent.com/nfoert/cardie/refs/heads/main/repo/images/icon_rounded.png">
+                                <span>Cardie</span>
+                                <i class="ph-bold ph-caret-down" x-show="!open"></i>
+                                <i class="ph-bold ph-caret-up" x-show="open"></i>
+                                <div class="bg-orange-400/40 border-orange-300/50 rounded-full py-0.5 px-2 ml-2" x-show="open" x-transition.delay.500ms>
+                                    <p class="text-white text-sans text-center text-xs">Archived</p>
+                                </div>
+                            </div>
+                        </button>
+
+                        <div x-show="open" x-collapse class="flex flex-col max-w-80">
+                            <p class="text-white text-sans text-center">An open source business card designer and sharing platform</p>
+                            <div class="flex flex-row gap-2 mt-2">
+                                <a class="ui_link_small" href="https://github.com/nfoert/cardie"><i class="ph-bold ph-github-logo"></i> Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="ui_link !font-mono" href="https://github.com/nfoert/md-to-html"><i class="ph-bold ph-file-md"></i> md-to-html</a>
+                    <a class="ui_link !font-mono" href="https://github.com/nfoert/niri-dotfiles"><i class="ph-bold ph-file"></i> niri-dotfiles</a>
+                    <a class="ui_link md:justify-start" href="https://github.com/nfoert/circles">
+                        <div class="flex justify-center items-center md:justify-start">
+                            <img class="w-6 h-6 inline" src="https://raw.githubusercontent.com/nfoert/circles/refs/heads/main/circles/static/main/images/icon.png">
+                            <span class="ml-2">Circles</span>
+                        </div>
+                    </a>
+                    <a class="ui_link !font-mono" href="https://github.com/nfoert/nfoert.github.io"><i class="ph-bold ph-browser"></i> nfoert.github.io</a>
+                    <a class="ui_link !font-mono" href="https://github.com/nfoert/pico-smart-home"><i class="ph-bold ph-house"></i> pico-smart-home</a>
+                    <a class="ui_link" href="https://github.com/nfoert?tab=repositories&type=source"> <i class="ph-bold ph-github-logo"></i> <strong>And more...</strong></a>
+                </div>
+            </div>
         </div>
-    </body>
+    </div>
+
+    <div class="absolute bottom-2 left-2 flex flex-row gap-1">
+        <p class="text-white text-xs opacity-60">Designed by nfoert</p>
+        <p class="text-white text-xs opacity-60">|</p>
+        <a class="text-white text-xs opacity-80 hover:scale-105 hover:opacity-100 transition-all" href="https://github.com/nfoert/nfoert.github.io"><i class="ph-bold ph-link"></i> Source Code</a>
+    </div>
+</body>
+
 </html>
