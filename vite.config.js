@@ -6,6 +6,6 @@ export default defineConfig({
   base: '/',
   plugins: [
     svelte(), 
-    tailwindcss()
+    tailwindcss()  
   ]
 });
