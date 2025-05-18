@@ -4,22 +4,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Build CSS",
+            "label": "Development",
             "type": "shell",
-            "command": "npx @tailwindcss/cli -i ./input.css -o ./output.css --watch",
-            "presentation": {
-                "reveal": "always",
-                "panel": "new"
-            },
-            "runOptions": {
-                "runOn": "folderOpen"
-            },
-            "problemMatcher": []
-        },
-        {
-            "label": "Serve site",
-            "type": "shell",
-            "command": "serve dist",
+            "command": "npm run dev",
             "presentation": {
                 "reveal": "always",
                 "panel": "new"
