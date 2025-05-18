@@ -17,13 +17,27 @@
             "problemMatcher": []
         },
         {
-            "type": "Live Preview",
-            "workspacePath": "/home/nfoert/Programming/nfoert.github.io",
-            "problemMatcher": [],
-            "label": "Live Preview: Run Server",
+            "label": "Serve site",
+            "type": "shell",
+            "command": "serve dist",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
             "runOptions": {
                 "runOn": "folderOpen"
-            }
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build site",
+            "type": "shell",
+            "command": "npm run build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
         }
     ]
 }
