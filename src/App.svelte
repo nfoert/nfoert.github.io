@@ -17,6 +17,8 @@
                 <p class="text-2xl font-bold text-white text-center md:text-right">nfoert</p>
                 <p class="text-md text-white text-center md:text-right opacity-80">he/him</p>
                 <p class="text-md text-white text-center md:text-right">Full stack web developer, who cares about open source and has experience in C++ and self hosting</p>
+
+                <img class="w-3/4 md:w-full" src="https://skillicons.dev/icons?i=html,css,js,alpinejs,tailwind,svelte,github,git,godot,python,django,cpp" alt="skillicons" />
             </div>
     
             <div class="bg-slate-700/50 w-full h-2 md:w-2 md:h-auto rounded-full border-slate-600/50 border-2 md:self-stretch"></div>
