@@ -10,20 +10,20 @@
 <main class="bg-slate-800">
     <div class="flex items-center justify-center min-h-screen min-w-screen">
         <div class="flex flex-col md:flex-row items-center justify-center gap-6">
-            <div class="flex flex-col w-2/3 md:w-1/4 gap-2 items-center md:items-end">
+            <div class="flex flex-col md:w-1/2 gap-2 items-center md:items-end">
                 <a href="https://github.com/nfoert">
                     <img src="https://github.com/nfoert.png" alt="nfoert" class="w-32 h-32 rounded-full border-2 border-slate-600/50 hover:scale-105 active:scale-95 transition-transform">
                 </a>
                 <p class="text-2xl font-bold text-white text-center md:text-right">nfoert</p>
                 <p class="text-md text-white text-center md:text-right opacity-80">he/him</p>
-                <p class="text-md text-white text-center md:text-right">Full stack web developer, who cares about open source and has experience in C++ and self hosting</p>
+                <p class="text-md text-white text-center md:text-right max-w-72 min-w-72">Full stack web developer, who cares about open source and has experience in C++ and self hosting</p>
 
-                <img class="w-3/4 md:w-full" src="https://skillicons.dev/icons?i=html,css,js,alpinejs,tailwind,svelte,github,git,godot,python,django,cpp" alt="skillicons" />
+                <img class="w-72 max-w-72" src="https://skillicons.dev/icons?i=html,css,js,alpinejs,tailwind,svelte,github,git,godot,python,django,cpp" alt="skillicons" />
             </div>
     
             <div class="bg-slate-700/50 w-full h-2 md:w-2 md:h-auto rounded-full border-slate-600/50 border-2 md:self-stretch"></div>
             
-            <div class="flex flex-col w-2/3 md:w-1/4 gap-2">
+            <div class="flex flex-col md:w-1/2 gap-2">
                 {#if projects}
                     <div class="flex flex-col gap-2" transition:slide>
                         <Link href="https://github.com/nfoert" text="github.com/" bold="nfoert" icon="ph-bold ph-github-logo" />
