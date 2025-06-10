@@ -8,7 +8,7 @@
 </script>
 
 <main class="bg-slate-800">
-    <div class="flex items-center justify-center min-h-screen min-w-screen">
+    <div class="flex items-center justify-center min-h-screen min-w-screen py-12 md:py-0">
         <div class="flex flex-col md:flex-row items-center justify-center gap-6">
             <div class="flex flex-col md:w-1/2 gap-2 items-center md:items-end">
                 <a href="https://github.com/nfoert">
