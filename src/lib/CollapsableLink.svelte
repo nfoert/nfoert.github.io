@@ -30,9 +30,9 @@
 
         {#if open}
             <div class="flex flex-col gap-2" transition:slide>
-                <p class="text-md text-white opacity-80 text-center">{description}</p>
-                <div class="flex flex-row items-centergap-2">
-                    <div class="flex flex-row gap-2">
+                <p class="text-md text-white opacity-80 text-center max-w-128">{description}</p>
+                <div class="flex flex-row items-center justify-center gap-2">
+                    <div class="flex flex-row gap-2 items-center justify-center">
                         {#each buttons as button}
                             <SmallLink href={button.href} text={button.text} bold={""} icon={button.icon} />
                         {/each}
