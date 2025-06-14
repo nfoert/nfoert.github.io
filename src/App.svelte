@@ -4,7 +4,7 @@
     import Link from './lib/Link.svelte';
     import CollapsableLink from './lib/CollapsableLink.svelte';
 
-    let projects = $state(true);
+    let projects = $state(false);
 </script>
 
 <main class="bg-slate-800">
@@ -24,20 +24,20 @@
             <div class="bg-slate-700/50 w-full h-2 md:w-2 md:h-auto rounded-full border-slate-600/50 border-2 md:self-stretch"></div>
             
             <div class="flex flex-col md:w-1/2 gap-2">
-                {#if projects}
+                {#if !projects}
                     <div class="flex flex-col gap-2" transition:slide>
                         <Link href="https://github.com/nfoert" text="github.com/" bold="nfoert" icon="ph-bold ph-github-logo" />
                         <Link href="https://mastodon.social/@nfoert" text="mastodon.social/" bold="@nfoert" icon="ph-bold ph-mastodon-logo" />
                         <Link href="https://pixelfed.social/@nfoert" text="pixelfed.social/" bold="@nfoert" icon="ph-bold ph-image" />
-                        <button onclick={() => projects = false} class="flex items-center md:items-left text-md px-6 py-2 rounded-full hover:bg-slate-600/40 active:bg-slate-700/60 transition-all hover:scale-105 active:scale-95 text-center md:text-left text-white">
+                        <button onclick={() => projects = true} class="flex items-center md:items-left text-md px-6 py-2 rounded-full hover:bg-slate-600/40 active:bg-slate-700/60 transition-all hover:scale-105 active:scale-95 text-center md:text-left text-white">
                             <i class="ph-bold ph-arrow-down"></i> Projects
                         </button>
                     </div>
                 {/if}
 
-                {#if !projects}
+                {#if projects}
                     <div class="flex flex-col gap-2" transition:slide>
-                        <button onclick={() => projects = true} class="flex items-center md:items-left text-md px-6 py-2 rounded-full hover:bg-slate-600/40 active:bg-slate-700/60 transition-all hover:scale-105 active:scale-95 text-center md:text-left text-white"><i class="ph-bold ph-arrow-up"></i> Links</button>
+                        <button onclick={() => projects = false} class="flex items-center md:items-left text-md px-6 py-2 rounded-full hover:bg-slate-600/40 active:bg-slate-700/60 transition-all hover:scale-105 active:scale-95 text-center md:text-left text-white"><i class="ph-bold ph-arrow-up"></i> Links</button>
                         <CollapsableLink 
                             text="Open Scouting" 
                             icon="https://raw.githubusercontent.com/FRC-Team3484/open-scouting/refs/heads/main/repo/images/icon.png" 
