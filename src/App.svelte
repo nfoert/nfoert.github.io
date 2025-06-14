@@ -29,6 +29,7 @@
                         <Link href="https://github.com/nfoert" text="github.com/" bold="nfoert" icon="ph-bold ph-github-logo" />
                         <Link href="https://mastodon.social/@nfoert" text="mastodon.social/" bold="@nfoert" icon="ph-bold ph-mastodon-logo" />
                         <Link href="https://pixelfed.social/@nfoert" text="pixelfed.social/" bold="@nfoert" icon="ph-bold ph-image" />
+                        <Link href="mailto:nfoert@proton.me" text="" bold="nfoert@proton.me" icon="ph-bold ph-envelope" />
                         <button onclick={() => projects = true} class="flex items-center md:items-left text-md px-6 py-2 rounded-full hover:bg-slate-600/40 active:bg-slate-700/60 transition-all hover:scale-105 active:scale-95 text-center md:text-left text-white">
                             <i class="ph-bold ph-arrow-down"></i> Projects
                         </button>
@@ -38,6 +39,9 @@
                 {#if projects}
                     <div class="flex flex-col gap-2" transition:slide>
                         <button onclick={() => projects = false} class="flex items-center md:items-left text-md px-6 py-2 rounded-full hover:bg-slate-600/40 active:bg-slate-700/60 transition-all hover:scale-105 active:scale-95 text-center md:text-left text-white"><i class="ph-bold ph-arrow-up"></i> Links</button>
+
+                        <p class="text-md text-white opacity-50 text-left my-2 px-6">Open Source Projects</p>
+
                         <CollapsableLink 
                             text="Open Scouting" 
                             icon="https://raw.githubusercontent.com/FRC-Team3484/open-scouting/refs/heads/main/repo/images/icon.png" 
@@ -61,9 +65,13 @@
                         />
                         <Link href="https://github.com/nfoert/nfoert.github.io" text="nfoert.github.io" bold="" icon="ph-bold ph-browser" />
                         <Link href="https://github.com/nfoert/niri-dotfiles" text="niri-dotfiles" bold="" icon="ph-bold ph-file" />
-                        <Link href="https://github.com/nfoert/md-to-html" text="md-to-html" bold="" icon="ph-bold ph-file-md" />
-                        <Link href="https://github.com/nfoert/pico-smart-home" text="pico-smart-home" bold="" icon="ph-bold ph-house" />
                         <Link href="https://github.com/nfoert?tab=repositories" text="" bold="And more..." icon="ph-bold ph-github-logo" />
+
+                        <p class="text-md text-white opacity-50 text-left my-2 px-6">Commissions</p>
+
+                        <Link href="https://dakotascustomcrafts.com" text="Dakota's Custom Crafts" bold="" icon="/static/dakotascustomcrafts.png" />
+
+                        <Link href="mailto:nfoert@proton.me" text="Request a Comission" bold="" icon="ph-bold ph-envelope" />
                     </div>
                 {/if}
             </div>
