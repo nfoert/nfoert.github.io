@@ -69,7 +69,7 @@
 
                         <p class="text-md text-white opacity-50 text-left my-2 px-6">Commissions</p>
 
-                        <Link href="https://dakotascustomcrafts.com" text="Dakota's Custom Crafts" bold="" icon="/static/dakotascustomcrafts.png" />
+                        <Link href="https://dakotascustomcrafts.com" text="Dakota's Custom Crafts" bold="" icon="/dakotascustomcrafts.png" />
 
                         <Link href="mailto:nfoert@proton.me" text="Request a Comission" bold="" icon="ph-bold ph-envelope" />
                     </div>
