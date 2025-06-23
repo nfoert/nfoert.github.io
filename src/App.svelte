@@ -67,11 +67,11 @@
                         <Link href="https://github.com/nfoert/niri-dotfiles" text="niri-dotfiles" bold="" icon="ph-bold ph-file" />
                         <Link href="https://github.com/nfoert?tab=repositories" text="" bold="And more..." icon="ph-bold ph-github-logo" />
 
-                        <p class="text-md text-white opacity-50 text-left my-2 px-6">Commissions</p>
+                        <p class="text-md text-white opacity-50 text-left my-2 px-6">Client Work</p>
 
                         <Link href="https://dakotascustomcrafts.com" text="Dakota's Custom Crafts" bold="" icon="/dakotascustomcrafts.png" />
 
-                        <Link href="mailto:nfoert@proton.me" text="Request a Comission" bold="" icon="ph-bold ph-envelope" />
+                        <Link href="mailto:nfoert@proton.me" text="Request a Commission" bold="" icon="ph-bold ph-envelope" />
                     </div>
                 {/if}
             </div>
