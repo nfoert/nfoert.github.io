@@ -51,7 +51,7 @@
     <div
     class="flex flex-col gap-8 h-auto md:h-full md:overflow-y-auto
            min-w-1/2 justify-center items-start ml-6 md:ml-0
-           text-left md:pr-[25%] mt-0 md:pt-60"
+           text-left md:pr-[25%] mt-0"
   >
         <div class="flex flex-col gap-2 items-start text-left">
             <p class="text-2xl text-white font-mono font-bold">
