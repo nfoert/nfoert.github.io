@@ -112,7 +112,7 @@
                         },
                         {
                             text: "Live Server",
-                            href: "https://open-scouting.duckdns.org",
+                            href: "https://206.189.255.232/",
                             icon: "ph-bold ph-browser",
                         },
                     ]}
