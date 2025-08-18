@@ -43,5 +43,13 @@
 
     <div
         class="flex flex-col gap-4 h-auto md:h-full md:overflow-y-auto min-w-1/2 justify-center items-center md:items-start text-left md:pr-[25%]"
-    ></div>
+    >
+        <div class="flex flex-col gap-2 items-center md:items-start text-left pl-2">
+            <p class="text-2xl text-white font-mono font-bold"><i class="ph-bold ph-link"></i> Links</p>
+            <Link href="https://github.com/nfoert" text="github.com/" bold="nfoert" icon="ph-bold ph-github-logo" />
+            <Link href="https://mastodon.social/@nfoert" text="mastodon.social/" bold="@nfoert" icon="ph-bold ph-mastodon-logo" />
+            <Link href="https://pixelfed.social/@nfoert" text="pixelfed.social/" bold="@nfoert" icon="ph-bold ph-image" />
+            <Link href="mailto:nfoert@proton.me" text="" bold="nfoert@proton.me" icon="ph-bold ph-envelope" />
+        </div>
+    </div>
 </main>
