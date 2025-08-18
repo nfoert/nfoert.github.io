@@ -203,6 +203,7 @@
     .scroll-shadow {
         overflow-y: auto;
         overflow-x: hidden;
+        scrollbar-width: none;
         -webkit-overflow-scrolling: touch;
         overflow-scrolling: touch;
 
@@ -236,6 +237,11 @@
         background-repeat: no-repeat;
         background-size: 100% 40px, 100% 40px, 100% 20px, 100% 20px;
         background-attachment: local, local, scroll, scroll;
+    }
+
+    .scroll-shadow::-webkit-scrollbar { /* WebKit browsers (Chrome, Safari, Opera) */
+        width: 0;
+        height: 0;
     }
 }
 </style>
