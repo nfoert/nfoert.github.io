@@ -1,6 +1,7 @@
 <script>
     import Link from "./lib/Link.svelte";
     import CollapsableLink from "./lib/CollapsableLink.svelte";
+    import SkillChip from "./lib/SkillChip.svelte";
 </script>
 
 <main
@@ -186,7 +187,66 @@
             </div>
         </div>
 
-        <p class="text-sm text-white font-mono opacity-50">
+        <div class="flex flex-col gap-2 items-start text-left">
+            <p class="text-2xl text-white font-mono font-bold">
+                <i class="ph-bold ph-list"></i> Skills
+            </p>
+
+            <div
+                class="flex flex-col gap-2 items-start text-left border-slate-500/50 border-l-2 pl-2"
+            >
+                <p class="text-md text-white font-mono ml-6 opacity-70">
+                    / Programming Languages
+                </p>
+
+                <div class="flex flex-row gap-2 flex-wrap">
+                    <SkillChip href="https://www.python.org/" text="Python" />
+                    <SkillChip href="https://cplusplus.com/" text="C++" />
+                    <SkillChip href="https://developer.mozilla.org/en-US/docs/Web/HTML" text="HTML" />
+                    <SkillChip href="https://developer.mozilla.org/en-US/docs/Web/CSS" text="CSS" />
+                    <SkillChip href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" text="JavaScript" />
+                </div>
+            </div>
+
+            <div
+                class="flex flex-col gap-2 items-start text-left border-slate-500/50 border-l-2 pl-2 mt-6"
+            >
+                <p class="text-md text-white font-mono ml-6 opacity-70">
+                    / Web Development
+                </p>
+
+                <div class="flex flex-row gap-2 flex-wrap">
+                    <SkillChip href="https://www.djangoproject.com/" text="Django" />
+                    <SkillChip href="https://tailwindcss.com/" text="Tailwind CSS" />
+                    <SkillChip href="https://svelte.dev/" text="Svelte" />
+                    <SkillChip href="https://alpinejs.dev/" text="Alpine.js" />
+                    <SkillChip href="https://pocketbase.io/" text="PocketBase" />
+                    <SkillChip href="https://github.com/arp242/goatcounter" text="Goatcounter" />
+                    <SkillChip href="https://www.electronjs.org/" text="Electron" />
+                </div>
+            </div>
+
+            <div
+                class="flex flex-col gap-2 items-start text-left border-slate-500/50 border-l-2 pl-2 mt-6"
+            >
+                <p class="text-md text-white font-mono ml-6 opacity-70">
+                    / Other
+                </p>
+
+                <div class="flex flex-row gap-2 flex-wrap">
+                    <SkillChip href="https://www.linux.org/" text="Linux" />
+                    <SkillChip href="https://www.docker.com/" text="Docker" />
+                    <SkillChip href="https://github.com/" text="Git & GitHub" />
+                    <SkillChip href="https://www.markdownguide.org/" text="Markdown" />
+                    <SkillChip href="https://godotengine.org/" text="Godot" />
+                    <SkillChip href="https://code.visualstudio.com/" text="VS Code" />
+                    <SkillChip href="https://www.qt.io/" text="QT" />
+                    <SkillChip href="https://textual.textualize.io/" text="Textual" />
+                </div>
+            </div>
+        </div>
+
+        <p class="text-sm text-white font-mono opacity-50 mb-12 md:mb-0">
             Created with <a class="underline" href="https://svelte.dev"
                 >Svelte</a
             >
@@ -198,50 +258,56 @@
 </main>
 
 <style>
-/* Thanks to https://codepen.io/chriscoyier/pen/YzXBYvL */
-@media (min-width: 48rem) {
-    .scroll-shadow {
-        overflow-y: auto;
-        overflow-x: hidden;
-        scrollbar-width: none;
-        -webkit-overflow-scrolling: touch;
-        overflow-scrolling: touch;
+    /* Thanks to https://codepen.io/chriscoyier/pen/YzXBYvL */
+    @media (min-width: 48rem) {
+        .scroll-shadow {
+            overflow-y: auto;
+            overflow-x: hidden;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+            overflow-scrolling: touch;
 
-        background:
+            background:
             /* Shadow Cover TOP */
-            linear-gradient(
-            oklch(27.9% 0.041 260.031) 30%,
-            rgba(255, 255, 255, 0)
-            ) center top,
-            
-            /* Shadow Cover BOTTOM */
-            linear-gradient(
-            rgba(255, 255, 255, 0), 
-            oklch(27.9% 0.041 260.031) 70%
-            ) center bottom,
-            
-            /* Shadow TOP */
-            radial-gradient(
-            farthest-side at 50% 0,
-            rgba(0, 0, 0, 0.2),
-            rgba(0, 0, 0, 0)
-            ) center top,
-            
-            /* Shadow BOTTOM */
-            radial-gradient(
-            farthest-side at 50% 100%,
-            rgba(0, 0, 0, 0.2),
-            rgba(0, 0, 0, 0)
-            ) center bottom;
-        
-        background-repeat: no-repeat;
-        background-size: 100% 40px, 100% 40px, 100% 20px, 100% 20px;
-        background-attachment: local, local, scroll, scroll;
-    }
+                linear-gradient(
+                        oklch(27.9% 0.041 260.031) 30%,
+                        rgba(255, 255, 255, 0)
+                    )
+                    center top,
+                /* Shadow Cover BOTTOM */
+                    linear-gradient(
+                        rgba(255, 255, 255, 0),
+                        oklch(27.9% 0.041 260.031) 70%
+                    )
+                    center bottom,
+                /* Shadow TOP */
+                    radial-gradient(
+                        farthest-side at 50% 0,
+                        rgba(0, 0, 0, 0.2),
+                        rgba(0, 0, 0, 0)
+                    )
+                    center top,
+                /* Shadow BOTTOM */
+                    radial-gradient(
+                        farthest-side at 50% 100%,
+                        rgba(0, 0, 0, 0.2),
+                        rgba(0, 0, 0, 0)
+                    )
+                    center bottom;
 
-    .scroll-shadow::-webkit-scrollbar { /* WebKit browsers (Chrome, Safari, Opera) */
-        width: 0;
-        height: 0;
+            background-repeat: no-repeat;
+            background-size:
+                100% 40px,
+                100% 40px,
+                100% 20px,
+                100% 20px;
+            background-attachment: local, local, scroll, scroll;
+        }
+
+        .scroll-shadow::-webkit-scrollbar {
+            /* WebKit browsers (Chrome, Safari, Opera) */
+            width: 0;
+            height: 0;
+        }
     }
-}
 </style>
