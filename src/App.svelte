@@ -4,14 +4,14 @@
 </script>
 
 <main
-  class="bg-slate-800 w-screen min-h-screen md:h-screen flex flex-col md:flex-row gap-4 
-         overflow-visible md:overflow-hidden"
+    class="bg-slate-800 w-screen min-h-screen md:h-screen flex flex-col md:flex-row gap-4
+         overflow-visible md:overflow-hidden md:items-center"
 >
-   <div
-    class="flex flex-col gap-4 h-auto md:h-full md:overflow-y-auto
-           min-w-1/2 justify-center items-start md:items-end ml-6 md:ml-0
-           text-left md:text-right md:pl-[25%] mt-12 md:mt-0"
-  >
+    <div
+        class="flex flex-col gap-4 h-auto md:max-h-[50vh] md:overflow-y-auto
+           min-w-1/2 justify-start items-start md:items-end ml-6 md:ml-0
+           text-left md:text-right md:pl-[25%] mt-12 md:mt-0 overflow-x-hidden scroll-shadow md:p-6"
+    >
         <a href="https://github.com/nfoert">
             <img
                 src="https://github.com/nfoert.png"
@@ -44,15 +44,15 @@
     </div>
 
     <div
-    class="border-2 border-slate-400/50 h-2 w-3/4 md:h-1/2 md:w-2 rounded-full 
+        class="border-2 border-slate-400/50 h-2 w-3/4 md:h-4/6 md:w-2 rounded-full
            opacity-50 mt-auto mb-auto ml-auto mr-auto bg-slate-600/50"
-  ></div>
+    ></div>
 
     <div
-    class="flex flex-col gap-8 h-auto md:h-full md:overflow-y-auto
-           min-w-1/2 justify-center items-start ml-6 md:ml-0
-           text-left md:pr-[25%] mt-0"
-  >
+        class="flex flex-col gap-8 h-auto md:max-h-[50vh] md:overflow-y-scroll
+           min-w-1/2 justify-start items-start ml-6 md:ml-0
+           text-left md:pr-[25%] overflow-x-hidden scroll-shadow md:p-6"
+    >
         <div class="flex flex-col gap-2 items-start text-left">
             <p class="text-2xl text-white font-mono font-bold">
                 <i class="ph-bold ph-link"></i> Links
@@ -196,3 +196,46 @@
         </p>
     </div>
 </main>
+
+<style>
+/* Thanks to https://codepen.io/chriscoyier/pen/YzXBYvL */
+@media (min-width: 48rem) {
+    .scroll-shadow {
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        overflow-scrolling: touch;
+
+        background:
+            /* Shadow Cover TOP */
+            linear-gradient(
+            oklch(27.9% 0.041 260.031) 30%,
+            rgba(255, 255, 255, 0)
+            ) center top,
+            
+            /* Shadow Cover BOTTOM */
+            linear-gradient(
+            rgba(255, 255, 255, 0), 
+            oklch(27.9% 0.041 260.031) 70%
+            ) center bottom,
+            
+            /* Shadow TOP */
+            radial-gradient(
+            farthest-side at 50% 0,
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0)
+            ) center top,
+            
+            /* Shadow BOTTOM */
+            radial-gradient(
+            farthest-side at 50% 100%,
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0)
+            ) center bottom;
+        
+        background-repeat: no-repeat;
+        background-size: 100% 40px, 100% 40px, 100% 20px, 100% 20px;
+        background-attachment: local, local, scroll, scroll;
+    }
+}
+</style>
