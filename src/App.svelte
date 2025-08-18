@@ -4,11 +4,14 @@
 </script>
 
 <main
-    class="bg-slate-800 w-screen min-h-screen md:h-screen flex flex-col md:flex-row overflow-hidden gap-4"
+  class="bg-slate-800 w-screen min-h-screen md:h-screen flex flex-col md:flex-row gap-4 
+         overflow-visible md:overflow-hidden"
 >
-    <div
-        class="flex flex-col gap-4 h-auto md:h-full md:overflow-y-auto min-w-1/2 justify-center items-start md:items-end ml-6 md:ml-0 text-left md:text-right md:pl-[25%] mt-12 md:mt-0"
-    >
+   <div
+    class="flex flex-col gap-4 h-auto md:h-full md:overflow-y-auto
+           min-w-1/2 justify-center items-start md:items-end ml-6 md:ml-0
+           text-left md:text-right md:pl-[25%] mt-12 md:mt-0"
+  >
         <a href="https://github.com/nfoert">
             <img
                 src="https://github.com/nfoert.png"
@@ -41,12 +44,15 @@
     </div>
 
     <div
-        class="border-2 border-slate-400/50 h-2 w-3/4 md:h-1/2 md:w-2 rounded-full opacity-50 mt-auto mb-auto ml-auto mr-auto bg-slate-600/50"
-    ></div>
+    class="border-2 border-slate-400/50 h-2 w-3/4 md:h-1/2 md:w-2 rounded-full 
+           opacity-50 mt-auto mb-auto ml-auto mr-auto bg-slate-600/50"
+  ></div>
 
     <div
-        class="flex flex-col gap-8 h-auto md:h-full md:overflow-y-auto min-w-1/2 justify-center items-start ml-6 md:ml-0 text-left md:pr-[25%] mt-0"
-    >
+    class="flex flex-col gap-8 h-auto md:h-full md:overflow-y-auto
+           min-w-1/2 justify-center items-start ml-6 md:ml-0
+           text-left md:pr-[25%] mt-0 md:pt-60"
+  >
         <div class="flex flex-col gap-2 items-start text-left">
             <p class="text-2xl text-white font-mono font-bold">
                 <i class="ph-bold ph-link"></i> Links
@@ -180,6 +186,13 @@
             </div>
         </div>
 
-        <p class="text-sm text-white font-mono opacity-50">Created with <a class="underline" href="https://svelte.dev">Svelte</a> and <a class="underline" href="https://tailwindcss.com/">Tailwind CSS</a> by nfoert</p>
+        <p class="text-sm text-white font-mono opacity-50">
+            Created with <a class="underline" href="https://svelte.dev"
+                >Svelte</a
+            >
+            and
+            <a class="underline" href="https://tailwindcss.com/">Tailwind CSS</a
+            > by nfoert
+        </p>
     </div>
 </main>
