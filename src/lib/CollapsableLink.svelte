@@ -19,7 +19,7 @@
             {#if open}
                 <i class="ph-bold ph-caret-up"></i>
                 {#if archived}
-                    <div class="flex flex-row items-center gap-2 bg-orange-500/50 rounded-full px-2">
+                    <div class="flex flex-row items-center gap-2 bg-orange-500/50 rounded-full px-2 ml-2">
                         <p class="text-sm text-white opacity-80 text-center font-mono">Archived</p>
                     </div>
                 {/if}
@@ -50,7 +50,7 @@
             {#if open}
                 <i class="ph-bold ph-caret-up"></i>
                 {#if archived}
-                    <div class="flex flex-row items-center gap-2 bg-orange-500/50 rounded-full px-2">
+                    <div class="flex flex-row items-center gap-2 bg-orange-500/50 rounded-full px-2 ml-2">
                         <p class="text-sm text-white opacity-80 text-center font-mono">Archived</p>
                     </div>
                 {/if}
