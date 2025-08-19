@@ -2,6 +2,25 @@
     import Link from "./lib/Link.svelte";
     import CollapsableLink from "./lib/CollapsableLink.svelte";
     import SkillChip from "./lib/SkillChip.svelte";
+    import { onMount } from "svelte";
+
+    onMount(() => {
+        const clock = document.getElementById("clock");
+        const now = new Date();
+        const offset = 0;
+        
+        function updateClock() {
+            const now = new Date(Date.now() + offset);
+            const hours = `0${now.getHours()}`.slice(-2);
+            const minutes = `0${now.getMinutes()}`.slice(-2);
+            const seconds = `0${now.getSeconds()}`.slice(-2);
+
+            clock.textContent = `${hours}:${minutes}:${seconds}`;
+        }
+
+        updateClock();
+        setInterval(updateClock, 1000);
+    });
 </script>
 
 <main
@@ -40,7 +59,9 @@
             <i class="ph-bold ph-map-pin"></i> USA
         </p>
         <p class="text-lg text-white font-mono">
-            <i class="ph-bold ph-clock"></i> UTC -4:00
+            <i class="ph-bold ph-clock"></i>
+            <span id="clock"></span>
+            <span class="opacity-70 text-sm">EST</span>
         </p>
     </div>
 
@@ -202,9 +223,18 @@
                 <div class="flex flex-row gap-2 flex-wrap">
                     <SkillChip href="https://www.python.org/" text="Python" />
                     <SkillChip href="https://cplusplus.com/" text="C++" />
-                    <SkillChip href="https://developer.mozilla.org/en-US/docs/Web/HTML" text="HTML" />
-                    <SkillChip href="https://developer.mozilla.org/en-US/docs/Web/CSS" text="CSS" />
-                    <SkillChip href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" text="JavaScript" />
+                    <SkillChip
+                        href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                        text="HTML"
+                    />
+                    <SkillChip
+                        href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                        text="CSS"
+                    />
+                    <SkillChip
+                        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                        text="JavaScript"
+                    />
                 </div>
             </div>
 
@@ -216,13 +246,28 @@
                 </p>
 
                 <div class="flex flex-row gap-2 flex-wrap">
-                    <SkillChip href="https://www.djangoproject.com/" text="Django" />
-                    <SkillChip href="https://tailwindcss.com/" text="Tailwind CSS" />
+                    <SkillChip
+                        href="https://www.djangoproject.com/"
+                        text="Django"
+                    />
+                    <SkillChip
+                        href="https://tailwindcss.com/"
+                        text="Tailwind CSS"
+                    />
                     <SkillChip href="https://svelte.dev/" text="Svelte" />
                     <SkillChip href="https://alpinejs.dev/" text="Alpine.js" />
-                    <SkillChip href="https://pocketbase.io/" text="PocketBase" />
-                    <SkillChip href="https://github.com/arp242/goatcounter" text="Goatcounter" />
-                    <SkillChip href="https://www.electronjs.org/" text="Electron" />
+                    <SkillChip
+                        href="https://pocketbase.io/"
+                        text="PocketBase"
+                    />
+                    <SkillChip
+                        href="https://github.com/arp242/goatcounter"
+                        text="Goatcounter"
+                    />
+                    <SkillChip
+                        href="https://www.electronjs.org/"
+                        text="Electron"
+                    />
                 </div>
             </div>
 
@@ -237,11 +282,20 @@
                     <SkillChip href="https://www.linux.org/" text="Linux" />
                     <SkillChip href="https://www.docker.com/" text="Docker" />
                     <SkillChip href="https://github.com/" text="Git & GitHub" />
-                    <SkillChip href="https://www.markdownguide.org/" text="Markdown" />
+                    <SkillChip
+                        href="https://www.markdownguide.org/"
+                        text="Markdown"
+                    />
                     <SkillChip href="https://godotengine.org/" text="Godot" />
-                    <SkillChip href="https://code.visualstudio.com/" text="VS Code" />
+                    <SkillChip
+                        href="https://code.visualstudio.com/"
+                        text="VS Code"
+                    />
                     <SkillChip href="https://www.qt.io/" text="QT" />
-                    <SkillChip href="https://textual.textualize.io/" text="Textual" />
+                    <SkillChip
+                        href="https://textual.textualize.io/"
+                        text="Textual"
+                    />
                 </div>
             </div>
         </div>
