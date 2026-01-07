@@ -134,7 +134,7 @@
                         },
                         {
                             text: "Live Server",
-                            href: "https://206.189.255.232/",
+                            href: "https://open-scouting.nfoert.dev/",
                             icon: "ph-bold ph-browser",
                         },
                     ]}
