@@ -44,11 +44,11 @@
             <p class="text-lg text-white font-mono opacity-70">he/him</p>
         </div>
 
-        <p class="text-2xl text-purple-700 font-bold">
+        <p class="text-2xl text-purple-600 font-bold">
             Full Stack Web Developer
         </p>
 
-        <p class="text-sm text-white opacity-70 max-w-80">
+        <p class="text-sm text-white opacity-70 max-w-full mr-8 md:max-w-80 md:mr-0">
             Hello! I'm nfoert, a software engineer who primarilly 
             focuses on web development. I also experiment with 
             lots of other random stuff, including desktop application 
