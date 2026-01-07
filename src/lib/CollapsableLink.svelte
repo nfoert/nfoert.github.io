@@ -20,7 +20,7 @@
                 <i class="ph-bold ph-caret-up"></i>
                 {#if archived}
                     <div class="flex flex-row items-center gap-2 bg-orange-500/50 rounded-full px-2 ml-2">
-                        <p class="text-sm text-white opacity-80 text-center font-mono">Archived</p>
+                        <p class="text-sm text-white opacity-80 text-center">Archived</p>
                     </div>
                 {/if}
             {:else}
@@ -30,7 +30,7 @@
 
         {#if open}
             <div class="flex flex-col gap-2" transition:slide>
-                <p class="text-md text-white opacity-80 text-left max-w-128 font-mono">{description}</p>
+                <p class="text-md text-white opacity-80 text-left max-w-128">{description}</p>
                 <div class="flex flex-row items-center justify-center gap-2">
                     <div class="flex flex-row gap-2 items-center justify-center">
                         {#each buttons as button}
@@ -51,7 +51,7 @@
                 <i class="ph-bold ph-caret-up"></i>
                 {#if archived}
                     <div class="flex flex-row items-center gap-2 bg-orange-500/50 rounded-full px-2 ml-2">
-                        <p class="text-sm text-white opacity-80 text-center font-mono">Archived</p>
+                        <p class="text-sm text-white opacity-80 text-center">Archived</p>
                     </div>
                 {/if}
             {:else}
@@ -61,7 +61,7 @@
 
         {#if open}
             <div class="flex flex-col gap-2" transition:slide>
-                <p class="text-md text-white opacity-80 text-left font-mono">{description}</p>
+                <p class="text-md text-white opacity-80 text-left">{description}</p>
                 <div class="flex flex-row items-center gap-2">
                     {#each buttons as button}
                         <SmallLink href={button.href} text={button.text} bold={""} icon={button.icon} />

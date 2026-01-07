@@ -44,15 +44,16 @@
             <p class="text-lg text-white font-mono opacity-70">he/him</p>
         </div>
 
-        <p class="text-2xl text-purple-800 font-mono font-bold">
+        <p class="text-2xl text-purple-700 font-bold">
             Full Stack Web Developer
         </p>
 
-        <p class="text-sm text-white font-mono opacity-70">
-            Hello! I'm nfoert, a software engineer who primarilly focuses on web
-            development. I also experiment with lots of other random stuff,
-            including desktop development and C++. I care a lot about open
-            source, do 3D printing, and use Linux.
+        <p class="text-sm text-white opacity-70 max-w-80">
+            Hello! I'm nfoert, a software engineer who primarilly 
+            focuses on web development. I also experiment with 
+            lots of other random stuff, including desktop application 
+            development and C++. I care a lot about open source, 
+            do 3D printing, and use Linux.
         </p>
 
         <p class="text-lg text-white font-mono">
@@ -300,7 +301,7 @@
             </div>
         </div>
 
-        <p class="text-sm text-white font-mono opacity-50 mb-12 md:mb-0">
+        <p class="text-sm text-white opacity-50 mb-12 md:mb-0">
             Created with <a class="underline" href="https://svelte.dev"
                 >Svelte</a
             >
