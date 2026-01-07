@@ -95,6 +95,7 @@
                     text="mastodon.social/"
                     bold="@nfoert"
                     icon="ph-bold ph-mastodon-logo"
+                    rel="me"
                 />
                 <Link
                     href="https://pixelfed.social/@nfoert"
