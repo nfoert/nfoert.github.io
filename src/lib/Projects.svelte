@@ -3,10 +3,13 @@
     import Button from "./Button.svelte";
     import Project from "./Project.svelte";
     import ProjectHeader from "./ProjectHeader.svelte";
+    import ProjectSubheader from "./ProjectSubheader.svelte";
 </script>
 
-<div class="flex flex-col min-h-screen" id="projects">
+<div class="flex flex-col h-auto" id="projects">
     <ProjectHeader title="Projects" description="Projects I've worked on" />
+
+    <ProjectSubheader title="Open Source" />
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 ml-8 mr-8">
         <Project 
@@ -125,6 +128,7 @@
         <Project 
             title="nfoert.github.io" 
             description="My portfolio site"
+            icon="favicon.ico"
             archived={false}
             skills={[
                 "Svelte",
@@ -135,5 +139,31 @@
                 <Button href="https://github.com/nfoert/nfoert.github.io"><GithubLogoIcon weight="bold"/> GitHub</Button>
             {/snippet}
         </Project>
+
+        
     </div>
+
+    <ProjectSubheader title="Commissions" />
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 ml-8 mr-8">
+
+        <Project 
+            title="Dakota's Custom Crafts" 
+            description="Custom store site for Dakota's Custom Crafts"
+            icon="dakotascustomcrafts.png"
+            archived={false}
+            image_urls={[
+                "dakotascustomcrafts_screenshot.png", 
+            ]}
+            skills={[
+                "SvelteKit",
+                "Pocketbase",
+                "Tailwind CSS"
+            ]}
+        >
+            {#snippet buttons()}
+                <Button href="https://dakotascustomcrafts.com"><AppWindowIcon weight="bold"/> Live Server</Button>
+            {/snippet}
+        </Project>
+    </div> 
 </div>  
