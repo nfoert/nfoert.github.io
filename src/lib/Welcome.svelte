@@ -2,6 +2,7 @@
     import { ClockIcon, EnvelopeSimpleIcon, GithubLogoIcon, MapPinIcon, MastodonLogoIcon } from "phosphor-svelte";
     import SocialLink from "./SocialLink.svelte";
     import { onMount } from "svelte";
+    import Quotes from "./Quotes.svelte";
 
     let now = $state(new Date());
 
@@ -59,5 +60,5 @@
         </SocialLink>
     </div>
 
-    <p class="text-md text-white/50 font-mono italic mt-4">"The line must go up"</p>
+    <Quotes />
 </div>
