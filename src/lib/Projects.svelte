@@ -19,7 +19,6 @@
             icon="https://github.com/FRC-Team3484/open-scouting/blob/main/repo/images/icon.png?raw=true"
             archived={false}
             image_urls={[
-                "https://github.com/FRC-Team3484/open-scouting/blob/main/repo/images/mockup.png?raw=true", 
                 "https://github.com/FRC-Team3484/open-scouting/blob/main/repo/images/mockup.png?raw=true"
             ]}
             skills={[
