@@ -3,16 +3,12 @@
 
     let location = $state('home');
     let projectsElement = null;
-    let skillsElement = null;
 
     function updateLocation() {
         const scrollPosition = window.scrollY;
         const projectsPosition = projectsElement ? projectsElement.offsetTop : Infinity;
-        const skillsPosition = skillsElement ? skillsElement.offsetTop : Infinity;
 
-        if (scrollPosition >= skillsPosition) {
-            location = 'skills';
-        } else if (scrollPosition >= projectsPosition) {
+        if (scrollPosition >= projectsPosition) {
             location = 'projects';
         } else {
             location = 'home';
@@ -28,7 +24,6 @@
 
     onMount(() => {
         projectsElement = document.getElementById('projects');
-        skillsElement = document.getElementById('skills');
         window.addEventListener('scroll', updateLocation);
     });
 
@@ -41,7 +36,5 @@
     <button onclick={() => scrollToSection("home")} class={location === 'home' ? 'text-green-600 hover:text-green-500 transition-colors' : 'text-white/50 hover:text-white transition-colors'}>nfoert</button>
     <p class="text-white/50">/</p>
     <button onclick={() => scrollToSection("projects")} class={location === 'projects' ? 'text-green-600 hover:text-green-500 transition-colors' : 'text-white/50 hover:text-white transition-colors'}>projects</button>
-    <p class="text-white/50">/</p>
-    <button onclick={() => scrollToSection("skills")} class={location === 'skills' ? 'text-green-600 hover:text-green-500 transition-colors' : 'text-white/50 hover:text-white transition-colors'}>skills</button>
 </div>
 
