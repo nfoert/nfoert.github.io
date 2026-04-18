@@ -18,11 +18,11 @@
     <img src="https://github.com/nfoert.png" alt="nfoert" class="w-32 h-32 rounded-full mb-8">
 
     <p class="text-lg text-white font-mono">Hello, I'm</p>
-    <p class="text-8xl text-white font-mono"><span class="text-green-600 drop-shadow-[0px_0px_39px_rgba(46,194,126,0.9)]">nfoert</span></p>
+    <p class="text-6xl md:text-8xl text-white font-mono"><span class="text-green-600 drop-shadow-[0px_0px_39px_rgba(46,194,126,0.9)]">nfoert</span></p>
 
     <p class="text-green-600 font-mono text-lg">Full Stack Web Developer</p>
 
-    <p class="text-white font-mono mt-4 max-w-lg text-center">I like building applications that solve real problems. I care about open source, 3D print, and self host stuff.</p>
+    <p class="text-white font-mono mt-4 max-w-lg text-center text-sm md:text-md mx-16">I like building applications that solve real problems. I care about open source, 3D print, and self host stuff.</p>
 
     <div class="flex flex-row gap-1 items-center mt-4">
         <MapPinIcon weight="bold" class="text-white"/>
@@ -58,4 +58,6 @@
             {/snippet}
         </SocialLink>
     </div>
+
+    <p class="text-md text-white/50 font-mono italic mt-4">"The line must go up"</p>
 </div>

@@ -2,7 +2,7 @@
     let { title, description = null } = $props();
 </script>
 
-<div class="mt-32 ml-16">
+<div class="mt-16 md:mt-32 ml-8 md:ml-16">
     <p class="text-white font-mono text-4xl">{title}</p>
 
     {#if description}

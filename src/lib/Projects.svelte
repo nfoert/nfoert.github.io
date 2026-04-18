@@ -4,6 +4,7 @@
     import Project from "./Project.svelte";
     import ProjectHeader from "./ProjectHeader.svelte";
     import ProjectSubheader from "./ProjectSubheader.svelte";
+    import ComissionRequest from "./ComissionRequest.svelte";
 </script>
 
 <div class="flex flex-col h-auto" id="projects">
@@ -165,5 +166,7 @@
                 <Button href="https://dakotascustomcrafts.com"><AppWindowIcon weight="bold"/> Live Server</Button>
             {/snippet}
         </Project>
+
+        <ComissionRequest />
     </div> 
 </div>  
