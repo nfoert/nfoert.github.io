@@ -4,6 +4,7 @@
         "bg-slate-800 is my favorite color",
         "I'm a real programmer so you don't get dark mode",
         "It works on my machine",
+        "I use arch btw",
     ]
     let quote = $state(getRandomQuote());
 
