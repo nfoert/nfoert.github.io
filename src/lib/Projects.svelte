@@ -58,6 +58,23 @@
         </Project>
 
         <Project 
+            title="DMS Desktop Countdown" 
+            description="A simple plugin for Dank Material Shell for displaying desktop widget countdowns"
+            archived={false}
+            image_urls={[
+                "https://github.com/nfoert/dms-desktop-countdown/blob/main/repo/images/image.png?raw=true", 
+            ]}
+            skills={[
+                "QTQuick",
+                "qml",
+            ]}
+        >
+            {#snippet buttons()}
+                <Button href="https://github.com/nfoert/dms-desktop-countdown"><GithubLogoIcon weight="bold"/> GitHub</Button>
+            {/snippet}
+        </Project>
+
+        <Project 
             title="Cardie" 
             description="An open source business card designer and sharing platform"
             icon="https://github.com/nfoert/cardie/blob/main/repo/images/icon_rounded.png?raw=true"
