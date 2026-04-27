@@ -12,7 +12,7 @@
 
     <ProjectSubheader title="Open Source" />
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 ml-8 mr-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 mx-8 xl:mx-32">
         <Project 
             title="Open Scouting" 
             description="An open source application for easier scouting at FIRST robotics competitions"
@@ -162,7 +162,7 @@
 
     <ProjectSubheader title="Commissions" />
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 ml-8 mr-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 mx-8 xl:mx-32">
 
         <Project 
             title="Dakota's Custom Crafts" 
