@@ -5,6 +5,7 @@
         "I'm a real programmer so you don't get dark mode",
         "It works on my machine",
         "I use arch btw",
+        "Soup king" // FRC 3484
     ]
     let quote = $state(getRandomQuote());
 
