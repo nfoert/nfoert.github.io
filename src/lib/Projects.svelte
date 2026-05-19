@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { AppWindowIcon, GithubLogoIcon } from "phosphor-svelte";
+    import { AppWindowIcon, ArrowRightIcon, GithubLogoIcon } from "phosphor-svelte";
     import Button from "./Button.svelte";
     import Project from "./Project.svelte";
     import ProjectHeader from "./ProjectHeader.svelte";
@@ -32,8 +32,8 @@
             ]}
         >
             {#snippet buttons()}
-                <Button href="https://github.com/FRC-Team3484/open-scouting"><GithubLogoIcon weight="bold"/> GitHub</Button>
-                <Button href="https://open-scouting.shortcircuitfirst.org"><AppWindowIcon weight="bold"/> Live Server</Button>
+                <Button href="https://open-scouting.shortcircuitfirst.org"><ArrowRightIcon weight="bold"/> Try App</Button>
+                <Button href="https://github.com/FRC-Team3484/open-scouting" variant="outline"><GithubLogoIcon weight="bold"/> GitHub</Button>
             {/snippet}
         </Project>
 
@@ -52,8 +52,8 @@
             ]}
         >
             {#snippet buttons()}
-                <Button href="https://github.com/nfoert/building-competition"><GithubLogoIcon weight="bold"/> GitHub</Button>
-                <Button href="https://modrinth.com/plugin/building-competition"><AppWindowIcon weight="bold"/> Modrinth</Button>
+            <Button href="https://modrinth.com/plugin/building-competition"><AppWindowIcon weight="bold"/> Modrinth</Button>
+                <Button href="https://github.com/nfoert/building-competition" variant="outline"><GithubLogoIcon weight="bold"/> GitHub</Button>
             {/snippet}
         </Project>
 
@@ -70,7 +70,8 @@
             ]}
         >
             {#snippet buttons()}
-                <Button href="https://github.com/nfoert/dms-desktop-countdown"><GithubLogoIcon weight="bold"/> GitHub</Button>
+                <Button href="https://danklinux.com/plugins"><ArrowRightIcon weight="bold"/> Plugin Registry</Button>
+                <Button href="https://github.com/nfoert/dms-desktop-countdown" variant="outline"><GithubLogoIcon weight="bold"/> GitHub</Button>
             {/snippet}
         </Project>
 
@@ -90,7 +91,7 @@
             ]}
         >
             {#snippet buttons()}
-                <Button href="https://github.com/nfoert/cardie"><GithubLogoIcon weight="bold"/> GitHub</Button>
+                <Button href="https://github.com/nfoert/cardie" variant="outline"><GithubLogoIcon weight="bold"/> GitHub</Button>
             {/snippet}
         </Project>
 
@@ -109,7 +110,7 @@
             ]}
         >
             {#snippet buttons()}
-                <Button href="https://github.com/nfoert/circles"><GithubLogoIcon weight="bold"/> GitHub</Button>
+                <Button href="https://github.com/nfoert/circles" variant="outline"><GithubLogoIcon weight="bold"/> GitHub</Button>
             {/snippet}
         </Project>
 
@@ -123,7 +124,7 @@
             ]}
         >
             {#snippet buttons()}
-                <Button href="https://github.com/nfoert/niri-dotfiles"><GithubLogoIcon weight="bold"/> GitHub</Button>
+                <Button href="https://github.com/nfoert/niri-dotfiles" variant="outline"><GithubLogoIcon weight="bold"/> GitHub</Button>
             {/snippet}
         </Project>
 
@@ -138,7 +139,7 @@
             ]}
         >
             {#snippet buttons()}
-                <Button href="https://github.com/nfoert/pico-smart-home"><GithubLogoIcon weight="bold"/> GitHub</Button>
+                <Button href="https://github.com/nfoert/pico-smart-home" variant="outline"><GithubLogoIcon weight="bold"/> GitHub</Button>
             {/snippet}
         </Project>
 
@@ -153,7 +154,7 @@
             ]}
         >
             {#snippet buttons()}
-                <Button href="https://github.com/nfoert/nfoert.github.io"><GithubLogoIcon weight="bold"/> GitHub</Button>
+                <Button href="https://github.com/nfoert/nfoert.github.io" variant="outline"><GithubLogoIcon weight="bold"/> GitHub</Button>
             {/snippet}
         </Project>
 

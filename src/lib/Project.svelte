@@ -27,7 +27,9 @@
     {/if}
 
     {#if image_urls.length > 0}
-        <ImageCarousel image_urls={image_urls} />
+        <div class="my-4">
+            <ImageCarousel image_urls={image_urls} />
+        </div>
     {/if}
 
     <div class="flex flex-row gap-2 items-center self-start">
