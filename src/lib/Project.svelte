@@ -4,7 +4,7 @@
     let { title, description, icon = null, archived = false, image_urls = [], skills = [], buttons } = $props();
 </script>
 
-<div class="flex flex-col gap-2 items-center border border-slate-600 rounded-xl bg-slate-800 shadow-lg p-8">
+<div class="flex flex-col gap-2 items-center border border-slate-600 rounded-xl bg-slate-800 shadow-lg p-8 min-w-32 lg:min-w-128 h-auto snap-center">
     <div class="flex flex-col gap-2 self-start">
         <div class="flex flex-row gap-4 items-center flex-wrap">
             {#if icon}
