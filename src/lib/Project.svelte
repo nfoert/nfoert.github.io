@@ -32,7 +32,7 @@
         </div>
     {/if}
 
-    <div class="flex flex-row gap-2 items-center self-start">
+    <div class="flex flex-row gap-2 items-center self-start mt-auto">
         {@render buttons()}
     </div>
 </div>
