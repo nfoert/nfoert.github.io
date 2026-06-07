@@ -58,6 +58,24 @@
         </Project>
 
         <Project 
+            title="DMS Framework Battery" 
+            description="Dank Material Shell battery widget, with support for changing the charge limit on Framework laptops "
+            archived={false}
+            image_urls={[
+                "https://github.com/nfoert/dms-framework-battery/blob/main/repo/images/image.png?raw=true", 
+            ]}
+            skills={[
+                "QTQuick",
+                "qml",
+            ]}
+        >
+            {#snippet buttons()}
+                <Button href="https://danklinux.com/plugins"><ArrowRightIcon weight="bold"/> Plugin Registry</Button>
+                <Button href="https://github.com/nfoert/dms-framework-battery" variant="outline"><GithubLogoIcon weight="bold"/> GitHub</Button>
+            {/snippet}
+        </Project>
+
+        <Project 
             title="DMS Desktop Countdown" 
             description="A simple plugin for Dank Material Shell for displaying desktop widget countdowns"
             archived={false}
